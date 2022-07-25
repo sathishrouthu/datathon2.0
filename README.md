@@ -1,6 +1,5 @@
 ## Phishing web urls identification by using text classification techniques
 
-
 ### Problem Statement:
 
 To detect whether the website URL is legitimate or phished based on the URL of the website.
@@ -21,6 +20,10 @@ phished website.
 * Tokenization with SpaCy : 
 - Spacy is a NLP open source toolkit and library which have prebuilt pipeline for many languages.
 - It builds the information extraction, natural language understanding systems and to pre-process text for deep learning.
+
+**Deployement** :
+The web app is deployed here : 
+<a href="https://phishing-sites-detection.herokuapp.com/"> Phishy Website detection - Heroku</a>
 
 ##### About Spacy:
 1. When you call nlp on a text, spaCy first tokenizes the text to produce a Doc object.
@@ -45,16 +48,18 @@ on these generated tokens we applied the following methods to represent them int
 ```
 After applying the above convertions we applied Multinomial NaiveBayes Classifier.
 ==> Results of Count Vectorization:
-      On Test data :  Accuracy Score : 93%
-                      Mathews Corr Coeff : 0.83
+      On Validation set :  Accuracy Score : 93%
+                           Mathews Corr Coeff : 83.66
+                           
+      On Test set :        Accuracy Score : 96%
+                           Mathews Corr Coeff : 85.9                      
                       
 ==> Results of TF-IDF :
-      On Test data : Accuracy Score : 
-                     Mathews Corr Coeff : 
-
+      On Validation set : Accuracy Score : 94% 
+                          Mathews Corr Coeff : 82.3
+                          
+      On Test Set       : Accuracy Score  : 92%
+                          Mathews Corr Coeff : 82.3
 ```
 
-**Deployement** :
-The web app is deployed here : 
-<a href="https://phishing-sites-detection.herokuapp.com/"> Phishy Website detection - Heroku</a>
 
